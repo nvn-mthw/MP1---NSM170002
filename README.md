@@ -66,3 +66,14 @@ method call.
 ### Your task: write code to instrument every field access in HelloThread to print out the access information. For example, a typical execution of the instrumented HelloThread will print: (code shown in MP1 instructions)
 
 This task took me a lot of time to figure out. I spent multiple days testing which methods of stmt can find the parameters for Log.logFieldAcc within the “if stmt.containsFieldRef()” statement. I tried out the different fields and found that stmt has a getFieldRef().getField().isStatic() method. This allowed me to know I can check if a statement is static or not. I then found that I can get the name of the thread and variable name through the stmt.getFieldRef().getField().getSignature().toString() method. I then needed to find a way to know the boolean if write is used or not. After looking at the values of stmt, I was able analyze that the stmt.getDefBoxes().toString().contains("($") being true meant that the write status was false as there was only three instance of writing according to the sample output. This meant that the presence of “($” was a factor in determining if the write status is true or false. I was able to then find the object o that I am to pass by calling the current thread.  I knew I needed to pass a thread, but did not know what method can be passed. Through some research, I learned that the Thread.currentThread() basically configured the current thread that was running. In overall, I was able to successfully implement the Log.LogFieldAcc method to print out the statements of the heap. Although the other is little different from the sample, it ultimately traces the heap. 
+
+The output is the following:
+
+Thread Thread-9 wrote static field <a1.HelloThread: int x>
+Thread Thread-10 wrote static field <a1.HelloThread: int x>
+Thread Thread-10 read instance field <a1.HelloThread$TestThread: int y> of object Thread[Thread-10,5,Soot Threadgroup]
+Thread Thread-10 wrote instance field <a1.HelloThread$TestThread: int y> of object Thread[Thread-10,5,Soot Threadgroup]
+Thread Thread-9 read instance field <a1.HelloThread$TestThread: int y> of object Thread[Thread-9,5,Soot Threadgroup]
+Thread Thread-9 read static field <a1.HelloThread: int x>
+Thread Thread-9 read static field <java.lang.System: java.io.PrintStream out>
+
