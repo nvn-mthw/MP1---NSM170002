@@ -45,7 +45,7 @@ PTA
 ![screencapture2](https://user-images.githubusercontent.com/76182733/112407772-b0b4c080-8ce4-11eb-9387-e82fd4259ba2.JPG)
 
 
-From the figure above, it becomes apparent that the PTA method is more precise than the CHA method as it was able to find that animal.saySomething() calls Cat.saySomething() in 7 edges, while the CHA method took 12 edges. Additionally, the PTA is faster in terms of speed to the CHA method as I took a timestamp of the start of call and end of the call in nanoseconds. The length the method ran is outputted on the image above. The CHA method took 206183100 nanoseconds, while the PTA method was able to compile in 214300 nanoseconds. This ultimately shows that the PTA method is more efficient than the CHA method. 
+From the figure above, it becomes apparent that the PTA method is more precise than the CHA method as it was able to find that animal.saySomething() calls Cat.saySomething() in 7 edges, while the CHA method took 12 edges. Additionally, the PTA is faster in terms of speed to the CHA method as I took a timestamp of the start of call and end of the call in nanoseconds. The length the method ran is outputted on the image above. The CHA method took 206183100 nanoseconds, while the PTA method was able to compile in 214300 nanoseconds. This ultimately shows that the PTA method is more efficient than the CHA method in terms of precision and speed. 
 
 ## Part 3: Program Instrumentation with Soot
 ### Your task: 
