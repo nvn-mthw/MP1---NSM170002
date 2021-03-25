@@ -75,5 +75,5 @@ Thread Thread-10 read instance field <a1.HelloThread$TestThread: int y> of objec
 Thread Thread-10 wrote instance field <a1.HelloThread$TestThread: int y> of object Thread[Thread-10,5,Soot Threadgroup]
 Thread Thread-9 read instance field <a1.HelloThread$TestThread: int y> of object Thread[Thread-9,5,Soot Threadgroup]
 Thread Thread-9 read static field <a1.HelloThread: int x>
-Thread Thread-9 read static field <java.lang.System: java.io.PrintStream out>
+Thread Thread-9 read static field <java.lang.System: java.io.PrintStream out> 
 
