@@ -34,10 +34,12 @@ Your task: run TestSootCallGraph on Example (add both TestSootCallGraph.java and
 Using the CHA and PTA methods already initialized in TestSootCallGraph, I ran both of them and the outputs are shown below.
 
 CHA
+
 ![screencapture1](https://user-images.githubusercontent.com/76182733/112407743-a4306800-8ce4-11eb-88be-e9dc7ead7e1d.JPG)
 
 
 PTA
+
 ![screencapture2](https://user-images.githubusercontent.com/76182733/112407772-b0b4c080-8ce4-11eb-9387-e82fd4259ba2.JPG)
 
 
